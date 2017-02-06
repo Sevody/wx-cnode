@@ -1,0 +1,10 @@
+.container>view {
+    padding:10px;
+}
+.content {
+    white-space: pre-line;
+    width:100%;
+    box-sizing:border-box;
+    word-wrap:break-word;
+
+}

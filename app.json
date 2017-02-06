@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/topic/topic",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/detail/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "YcNode",
+    "navigationBarTextStyle":"#fff",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/topic/topic",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/index/index",
+      "text": "我的"
+    }],
+    "selectedColor": "#7e7",
+    "position": "bottom"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

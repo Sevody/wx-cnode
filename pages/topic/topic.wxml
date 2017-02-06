@@ -1,0 +1,33 @@
+<view class="container">
+    <view class="header" catchtap="switchTab">
+        <view id="all">all</view>
+        <view id="good">good</view>
+        <view id="share">share</view>
+        <view id="ask">ask</view>
+        <view id="job">job</view>
+    </view>
+    <view class="content">
+        <scroll-view bindscrolltolower="lower">
+            <block wx:for="{{topicList}}">
+                <view class="topic" id="{{item.id}}" catchtap="goDetail">
+                    <view class="topic-info">
+                        <view  class="author-avatar">
+                            <image src="{{item.author.avatar_url}}"></image>
+                        </view>
+                        <view class="author-loginname">{{item.author.loginname}}</view>
+                        <view class="top" wx:if="{{item.top}}">置顶</view>
+                        <view class="last-reply">{{item.last_reply_at}}</view>
+                    </view>
+                    <view class="title">{{item.title}}</view>
+                    <view class="review">
+                        <text>{{item.reply_count}}</text>
+                        <text>/{{item.visit_count}}</text>
+                    </view>               
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+    <loading hidden="{{hidden}}">
+        加载中...
+    </loading>
+</view>
